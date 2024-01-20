@@ -1,14 +1,9 @@
 "use client";
-import React from "react";
+import { useState } from "react";
 import HighchartsChart from "./components/HighchartsChart";
 
-
-interface AdminInterface {
-    username: string;
-}
-
-const Page: React.FC<AdminInterface> = (props) => {
-    const { username } = props;
+function Page() {
+    const [username, setUsername] = useState('Testname');
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
